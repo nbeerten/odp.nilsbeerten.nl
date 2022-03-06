@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^/(?*)$ /$1 [L,NC]
+RewriteRule ^/(*)$ /$1 [L,NC]

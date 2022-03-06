@@ -50,7 +50,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title><? $disgd_user['username'] ?> - ODP</title>
+        <title><? echo $disgd_user['username']; ?> - ODP</title>
 
 		<!-- Custom CSS-->
 		<link rel="stylesheet" href="custom.css">
@@ -64,7 +64,7 @@
                         <div>
                             <!-- Url for banner images is: https://cdn.discordapp.com/banners/{id}/{image}?size=desired_size -->
                             <? if($disgd_user['banner'] !== "") { ?>
-                                <img src="<? "https://cdn.discordapp.com/banners/".$disgd_user['id']."/".$disgd_user['banner']."?size=300" ?>">
+                                <img src="<? echo "https://cdn.discordapp.com/banners/".$disgd_user['id']."/".$disgd_user['banner']."?size=300"; ?>">
                             <? }; ?>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                             <div class="nb-odp-profile-picture-pic">
                                 <!-- Url for banner images is: https://cdn.discordapp.com/avatars/{id}/{image} -->
                                 <? if($disgd_user['banner'] !== "") { ?>
-                                    <img src="<? "https://cdn.discordapp.com/banners/".$disgd_user['id']."/".$disgd_user['banner']."?size=300" ?>">
+                                    <img src="<? echo "https://cdn.discordapp.com/banners/".$disgd_user['id']."/".$disgd_user['banner']."?size=300"; ?>">
                                 <? }; ?>
                             </div>
                             <div class="nb-odp-profile-picture-status">
@@ -83,7 +83,7 @@
                             <div><img src="assets/balancebadge.svg"></div>
                             <div><img src="assets/nitrobadge.svg"></div>
                         </div>
-                        <h1><? $disgd_user['username']."#".$disgd_user['discriminator'] ?></h1>
+                        <h1><? echo $disgd_user['username']."#".$disgd_user['discriminator']; ?></h1>
                     </div>
                     <div class="nb-odp-profile-usercontent">    
                         <div class="nb-odp-profile-divider"></div>

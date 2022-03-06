@@ -1,4 +1,4 @@
 Options +FollowSymLinks
 RewriteEngine on
-RewriteRule ^$1 /index.php?(.*)$ [L,NC]
-RewriteRule ^$1/ /index.php?(.*)$ [L,NC]
+RewriteRule ^(.*)$ /index.php?$1
+RewriteRule ^(.*)$/ /index.php?$1 

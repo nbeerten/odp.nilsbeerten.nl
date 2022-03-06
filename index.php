@@ -50,7 +50,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title><? echo $disgd_user['username']; ?> - ODP</title>
+        <title><? echo $disgd_user['username']; ?> - ODP</title> 
 
 		<!-- Custom CSS-->
 		<link rel="stylesheet" href="custom.css">

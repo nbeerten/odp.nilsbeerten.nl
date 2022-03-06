@@ -73,7 +73,7 @@
                             <div class="nb-odp-profile-picture-pic">
                                 <!-- Url for banner images is: https://cdn.discordapp.com/avatars/{id}/{image} -->
                                 <? if($disgd_user['banner'] !== "") { ?>
-                                    <img src="<? echo "https://cdn.discordapp.com/banners/".$disgd_user['id']."/".$disgd_user['banner']."?size=300"; ?>">
+                                    <img src="<? echo "https://cdn.discordapp.com/avatars/".$disgd_user['id']."/".$disgd_user['avatar']; ?>">
                                 <? }; ?>
                             </div>
                             <div class="nb-odp-profile-picture-status">

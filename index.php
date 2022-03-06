@@ -33,7 +33,7 @@
         public function get_users($id) {
             $resp = $this->call_API("/users/", $id);
             $data = json_decode($resp);
-            return $data;
+            return (array)$data;
         }
     }
 

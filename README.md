@@ -1,5 +1,5 @@
 # ODP (OpenDiscordProfile)
-# Still in development!
+## Still in development!
 Repository of the ODP project. 
 
 ## What is ODP?

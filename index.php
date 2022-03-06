@@ -60,7 +60,7 @@
         <main>
             <div class="nb-odp-main">
                 <div class="nb-odp-profile">
-                    <div class="nb-odp-profile-banner">
+                    <div class="nb-odp-profile-banner" style="background-color: #<? echo $disgd_user['accent-color']; ?>;">
                         <div>
                             <!-- Url for banner images is: https://cdn.discordapp.com/banners/{id}/{image}?size=desired_size -->
                             <? if($disgd_user['banner'] !== "") { ?>

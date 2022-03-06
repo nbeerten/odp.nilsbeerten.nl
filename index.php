@@ -62,7 +62,7 @@
                 <div class="nb-odp-profile">
                     <div class="nb-odp-profile-banner" style="background-color: #<? echo dechex($disgd_user['accent_color']); ?>;">
                         <div>
-                            <!-- Url for banner images is: https://cdn.discordapp.com/banners/{id}/{image}?size=desired_size -->
+                            <? // Url for banner images is: https://cdn.discordapp.com/banners/{id}/{image}?size=desired_size ?>
                             <? if($disgd_user['banner'] !== null) { ?>
                                 <img src="<? echo "https://cdn.discordapp.com/banners/".$disgd_user['id']."/".$disgd_user['banner']."/?size=300"; ?>">
                             <? }; ?>
@@ -71,7 +71,7 @@
                     <div class="nb-odp-profile-name">
                         <div class="nb-odp-profile-picture">
                             <div class="nb-odp-profile-picture-pic">
-                                <!-- Url for banner images is: https://cdn.discordapp.com/avatars/{id}/{image} -->
+                                <? // Url for banner images is: https://cdn.discordapp.com/avatars/{id}/{image} ?>
                                 <? if($disgd_user['banner'] !== "") { ?>
                                     <img src="<? echo "https://cdn.discordapp.com/avatars/".$disgd_user['id']."/".$disgd_user['avatar']; ?>">
                                 <? }; ?>

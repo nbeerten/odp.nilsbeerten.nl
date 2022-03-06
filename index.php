@@ -64,7 +64,7 @@
                         <div>
                             <!-- Url for banner images is: https://cdn.discordapp.com/banners/{id}/{image}?size=desired_size -->
                             <? if($disgd_user['banner'] !== "") { ?>
-                                <img src="<? echo "https://cdn.discordapp.com/banners/".$disgd_user['id']."/".$disgd_user['banner']."?size=300"; ?>">
+                                <img src="<? echo "https://cdn.discordapp.com/banners/".$disgd_user['id']."/".$disgd_user['banner']."/?size=300"; ?>">
                             <? }; ?>
                         </div>
                     </div>

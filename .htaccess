@@ -1,6 +1,6 @@
 # Redirect Query String
 <IfModule mod_rewrite.c>
-    Options +FollowSymLinks -MultiViews
+    Options Indexes FollowSymLinks MultiViews
     RewriteEngine On
 	RewriteRule ^/([0-9]+)$ /?$1 [NC,P]
 </IfModule>

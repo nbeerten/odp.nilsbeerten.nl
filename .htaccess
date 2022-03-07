@@ -1,4 +1,4 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-	RewriteRule ^/([0-9])$ /?$1 [NC,P]
+    RewriteRule ^(\d{18})/?$ /?$1 [L,QSA]
 </IfModule>

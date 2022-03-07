@@ -1,5 +1,5 @@
+# Redirect Query String
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{REQUEST_URI} ^/([0-9]{18}) [NC]
-	RewriteRule (.*) /?$1 [NC,P]
+	RewriteRule ^/([0-9]+)$ /?$1 [L,NC]
 </IfModule>

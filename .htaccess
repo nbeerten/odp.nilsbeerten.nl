@@ -1,6 +1,5 @@
 <IfModule mod_rewrite.c>
     Options +FollowSymLinks -MultiViews
     RewriteEngine On
-	RewriteCond %{REQUEST_URI} ^/([0-9]+)/
-	RewriteRule (.*) /?%1 [P]
+	RewriteRule ^/([0-9]+)$ /?$1 [NC,P]
 </IfModule>

@@ -1,6 +1,6 @@
 # Redirect Query String
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{REQUEST_URI} ^/([0-9]+)/
-	RewriteRule (.*) /?%1
+    RewriteBase /
+	RewriteRule ^/([0-9]+)$ /?$1 [L,NC]
 </IfModule>

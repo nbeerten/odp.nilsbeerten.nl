@@ -2,5 +2,5 @@
 <IfModule mod_rewrite.c>
     Options +FollowSymLinks -MultiViews
     RewriteEngine On
-	RewriteRule ^/([0-9]+)$ /?$1 [NC,P]
+	RewriteRule ^/?([0-9]+)$ /$1 [NC,P]
 </IfModule>

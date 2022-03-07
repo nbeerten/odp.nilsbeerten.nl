@@ -1,4 +1,4 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-	RewriteRule ^/([0-9]+)$ /?$1 [NC,P]
+	RewriteRule ^/([0-9])$ /?$1 [NC,P]
 </IfModule>

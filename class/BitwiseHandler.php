@@ -79,12 +79,12 @@ class BitwiseHandler extends BitwiseFlag {
 
     public function __toString() {
         return 'User [' .
-            ($this->isStaff() ? 'Staff' : '') .
-            ($this->isPartner() ? 'Partner' : '') .
-            ($this->isHypesquad() ? 'Hypesquad' : '') .
-            ($this->isHypesquad_Bravery() ? 'Hypesquad Bravery' : '') .
-            ($this->isHypesquad_Brilliance() ? ' Hypesquad Brilliance' : '') .
-            ($this->isHypesquad_Balance() ? ' Hypesquad Balance' : '') .
+            ($this->isStaff() ? 'Staff' : '1') .
+            ($this->isPartner() ? 'Partner' : '2') .
+            ($this->isHypesquad() ? 'Hypesquad' : '3') .
+            ($this->isHypesquad_Bravery() ? 'Hypesquad Bravery' : '4') .
+            ($this->isHypesquad_Brilliance() ? ' Hypesquad Brilliance' : '5') .
+            ($this->isHypesquad_Balance() ? ' Hypesquad Balance' : '6') .
             ']';
     }
 }

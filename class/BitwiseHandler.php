@@ -38,7 +38,7 @@ class BitwiseHandler extends BitwiseFlag {
     }
 
     public function isHypesquad_Bravery() {
-        return $this->isFlagSet(self::FLAG_HYPESQUAD);
+        return $this->isFlagSet(self::FLAG_HYPESQUAD_BRAVERY);
     }
 
     public function isHypesquad_Brilliance() {
@@ -49,8 +49,39 @@ class BitwiseHandler extends BitwiseFlag {
         return $this->isFlagSet(self::FLAG_HYPESQUAD_BALANCE);
     }
 
+    public function isPremium_Early_Supporter() {
+        return $this->isFlagSet(self::FLAG_PREMIUM_EARLY_SUPPORTER);
+    }
+
+    public function isTeam_Pseudo_User() {
+        return $this->isFlagSet(self::FLAG_TEAM_PSEUDO_USER);
+    }
+
+    public function isBug_Hunter_Level_2() {
+        return $this->isFlagSet(self::FLAG_BUG_HUNTER_LEVEL_2);
+    }
+
+    public function isVerified_Bot() {
+        return $this->isFlagSet(self::FLAG_VERIFIED_BOT);
+    }
+
+    public function isVerified_Developer() {
+        return $this->isFlagSet(self::FLAG_VERIFIED_DEVELOPER);
+    }
+
+    public function isCertified_Moderator() {
+        return $this->isFlagSet(self::FLAG_CERTIFIED_MODERATOR);
+    }
+
+    public function isBOT_HTTP_INTERACTIONS() {
+        return $this->isFlagSet(self::FLAG_BOT_HTTP_INTERACTIONS);
+    }
+
     public function __toString() {
         return 'User [' .
+            ($this->isStaff() ? 'Staff' : '') .
+            ($this->isPartner() ? 'Partner' : '') .
+            ($this->isHypesquad() ? 'Hypesquad' : '') .
             ($this->isHypesquad_Bravery() ? 'Hypesquad Bravery' : '') .
             ($this->isHypesquad_Brilliance() ? ' Hypesquad Brilliance' : '') .
             ($this->isHypesquad_Balance() ? ' Hypesquad Balance' : '') .

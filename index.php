@@ -49,7 +49,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "deco
     $disgd_user = $disgd->get_users($id);
 
     //* "Decoding" user flags
-    $userflags = $bitwisehandler->get($disgd_user['public_flags'])
+    $userflags = $bitwisehandler->get($disgd_user['public_flags']);
+    // echo json_encode($userflags);
 ?>
 <!doctype html>
 <html lang="en">

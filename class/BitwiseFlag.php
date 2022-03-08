@@ -13,7 +13,7 @@ abstract class BitwiseFlag {
    *
    */
     protected function isFlagSet($flag) {
-        return (($this->flags << $flag) == $flag);
+        return (($this->flags >> $flag) == $flag);
     }
 }
 ?>

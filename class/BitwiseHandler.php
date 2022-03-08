@@ -80,21 +80,21 @@ class BitwiseHandler {
     }
 
     public function get($api) {
-        $userflags = array(
-            ($this->isStaff($api) ? 'STAFF' : '') ,
-            ($this->isPartner($api) ? 'PARTNER' : '') ,
-            ($this->isHypesquad($api) ? 'HYPESQUAD' : '') ,
-            ($this->isBug_Hunter_Level_1($api) ? 'BUG_HUNTER_LEVEL_1' : '') ,
-            ($this->isHypesquad_Bravery($api) ? 'HYPESQUAD_BRAVERY' : '') ,
-            ($this->isHypesquad_Brilliance($api) ? 'HYPESQUAD_BRILLIANCE' : '') ,
-            ($this->isHypesquad_Balance($api) ? 'HYPESQUAD_BALANCE' : '') ,
-            ($this->isPremium_Early_Supporter($api) ? 'PREMIUM_EARLY_SUPPORTER' : '') ,
-            ($this->isTeam_Pseudo_User($api) ? 'TEAM_PSEUDO_USER' : '') ,
-            ($this->isBug_Hunter_Level_2($api) ? 'FLAG_BUG_HUNTER_LEVEL_2' : '') ,
-            ($this->isVerified_Developer($api) ? 'VERIFIED_DEVELOPER' : '') ,
-            ($this->isCertified_Moderator($api) ? 'CERTIFIED_MODERATOR' : '') ,
-            ($this->isBOT_HTTP_INTERACTIONS($api) ? 'BOT_HTTP_INTERACTIONS' : '') ,
-            );
+        $userflags = 'USER ['
+            ($this->isStaff($api) ? 'STAFF' : '') .
+            ($this->isPartner($api) ? 'PARTNER' : '') .
+            ($this->isHypesquad($api) ? 'HYPESQUAD' : '') .
+            ($this->isBug_Hunter_Level_1($api) ? 'BUG_HUNTER_LEVEL_1' : '') .
+            ($this->isHypesquad_Bravery($api) ? 'HYPESQUAD_BRAVERY' : '') .
+            ($this->isHypesquad_Brilliance($api) ? 'HYPESQUAD_BRILLIANCE' : '') .
+            ($this->isHypesquad_Balance($api) ? 'HYPESQUAD_BALANCE' : '') .
+            ($this->isPremium_Early_Supporter($api) ? 'PREMIUM_EARLY_SUPPORTER' : '') .
+            ($this->isTeam_Pseudo_User($api) ? 'TEAM_PSEUDO_USER' : '') .
+            ($this->isBug_Hunter_Level_2($api) ? 'FLAG_BUG_HUNTER_LEVEL_2' : '') .
+            ($this->isVerified_Developer($api) ? 'VERIFIED_DEVELOPER' : '') .
+            ($this->isCertified_Moderator($api) ? 'CERTIFIED_MODERATOR' : '') .
+            ($this->isBOT_HTTP_INTERACTIONS($api) ? 'BOT_HTTP_INTERACTIONS' : '') .
+            ']';
         return $userflags;
     }
 }

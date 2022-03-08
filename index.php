@@ -1,6 +1,6 @@
 <?php
 // Import Classes
-require_once 'BitwiseHandler.php'; // For "decoding" the user flags
+require_once '/class/BitwiseHandler.php'; // For "decoding" the user flags
 
     class secrets {
         //* Get bot_token from secret.json (Secrets file)

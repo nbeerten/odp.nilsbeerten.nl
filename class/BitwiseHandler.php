@@ -7,20 +7,20 @@ require('BitwiseFlag.php');
 
 class BitwiseHandler extends BitwiseFlag
 {
-  const FLAG_STAFF = 0;
-  const FLAG_PARTNER = 1;
-  const FLAG_HYPESQUAD = 2;
-  const FLAG_BUG_HUNTER_LEVEL_1 = 3;
+  const FLAG_STAFF = 1;
+  const FLAG_PARTNER = 2;
+  const FLAG_HYPESQUAD = 4;
+  const FLAG_BUG_HUNTER_LEVEL_1 = 8;
   const FLAG_HYPESQUAD_BRAVERY = 6;
-  const FLAG_HYPESQUAD_BRILLIANCE = 7;
-  const FLAG_HYPESQUAD_BALANCE = 8;
-  const FLAG_PREMIUM_EARLY_SUPPORTER = 9;
-  const FLAG_TEAM_PSEUDO_USER = 10;
-  const FLAG_BUG_HUNTER_LEVEL_2 = 14;
-  const FLAG_VERIFIED_BOT = 16;
-  const FLAG_VERIFIED_DEVELOPER = 17;
-  const FLAG_CERTIFIED_MODERATOR = 18;
-  const FLAG_BOT_HTTP_INTERACTIONS = 19;
+  const FLAG_HYPESQUAD_BRILLIANCE = 128;
+  const FLAG_HYPESQUAD_BALANCE = 256;
+  const FLAG_PREMIUM_EARLY_SUPPORTER = 512;
+  const FLAG_TEAM_PSEUDO_USER = 1024;
+  const FLAG_BUG_HUNTER_LEVEL_2 = 16384;
+  const FLAG_VERIFIED_BOT = 65536;
+  const FLAG_VERIFIED_DEVELOPER = 131072;
+  const FLAG_CERTIFIED_MODERATOR = 262144;
+  const FLAG_BOT_HTTP_INTERACTIONS = 524288;
 
   public function isStaff(){
     return $this->isFlagSet(self::FLAG_STAFF);

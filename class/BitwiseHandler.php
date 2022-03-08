@@ -80,21 +80,21 @@ class BitwiseHandler {
     }
 
     public function get($api) {
-        $userflags = (string)'['.
-            ($this->isStaff($api) ? 'STAFF' : '') .
-            ($this->isPartner($api) ? 'PARTNER' : '') .
-            ($this->isHypesquad($api) ? 'HYPESQUAD' : '') .
-            ($this->isBug_Hunter_Level_1($api) ? 'BUG_HUNTER_LEVEL_1' : '') .
-            ($this->isHypesquad_Bravery($api) ? 'HYPESQUAD_BRAVERY' : '') .
-            ($this->isHypesquad_Brilliance($api) ? 'HYPESQUAD_BRILLIANCE' : '') .
-            ($this->isHypesquad_Balance($api) ? 'HYPESQUAD_BALANCE' : '') .
-            ($this->isPremium_Early_Supporter($api) ? 'PREMIUM_EARLY_SUPPORTER' : '') .
-            ($this->isTeam_Pseudo_User($api) ? 'TEAM_PSEUDO_USER' : '') .
-            ($this->isBug_Hunter_Level_2($api) ? 'FLAG_BUG_HUNTER_LEVEL_2' : '') .
-            ($this->isVerified_Developer($api) ? 'VERIFIED_DEVELOPER' : '') .
-            ($this->isCertified_Moderator($api) ? 'CERTIFIED_MODERATOR' : '') .
-            ($this->isBOT_HTTP_INTERACTIONS($api) ? 'BOT_HTTP_INTERACTIONS' : '') .
-            ']';
+        $userflags = [
+            "STAFF" => ($this->isStaff($api) ? true : false) ,
+            "PARTNER" => ($this->isPartner($api) ? true : false) ,
+            "HYPESQUAD" => ($this->isHypesquad($api) ? true : false) ,
+            "BUG_HUNTER_LEVEL_1" => ($this->isBug_Hunter_Level_1($api) ? true : false) ,
+            "HYPESQUAD_BRAVERY" => ($this->isHypesquad_Bravery($api) ? true : false) ,
+            "HYPESQUAD_BRILLIANCE" => ($this->isHypesquad_Brilliance($api) ? true : false) ,
+            "HYPESQUAD_BALANCE" => ($this->isHypesquad_Balance($api) ? true : false) ,
+            "PREMIUM_EARLY_SUPPORTER" => ($this->isPremium_Early_Supporter($api) ? true : false) ,
+            "TEAM_PSEUDO_USER" => ($this->isTeam_Pseudo_User($api) ? true : false) ,
+            "FLAG_BUG_HUNTER_LEVEL_2" => ($this->isBug_Hunter_Level_2($api) ? true : false) ,
+            "VERIFIED_DEVELOPER" => ($this->isVerified_Developer($api) ? true : false) ,
+            "CERTIFIED_MODERATOR" => ($this->isCertified_Moderator($api) ? true : false) ,
+            "BOT_HTTP_INTERACTIONS" => ($this->isBOT_HTTP_INTERACTIONS($api) ? true : false) ,
+            ];
         return $userflags;
     }
 }

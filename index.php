@@ -43,7 +43,6 @@
 
     //* Get the data
     $disgd_user = $disgd->get_users($id);
-    echo json_encode($disgd_user);
 ?>
 <!doctype html>
 <html lang="en">

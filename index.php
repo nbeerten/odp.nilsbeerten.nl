@@ -33,6 +33,7 @@
         //* Get the user object using the `/users/{user.id}` type
         public function get_users($id) {
             $resp = $this->call_API("/users/", $id);
+            echo $resp; // TEMPORARY
             $data = json_decode($resp);
             return (array)$data;
         }

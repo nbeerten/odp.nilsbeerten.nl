@@ -1,6 +1,6 @@
 <? 
 require_once 'BitwiseHandler.php';
 
-$bitwise = new BitwiseHandler('64');
-echo $bitwise;
+$bitwise = new BitwiseHandler;
+echo $bitwise->get('640');
 ?>

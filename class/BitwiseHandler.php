@@ -80,7 +80,7 @@ class BitwiseHandler {
     }
 
     public function get($api) {
-        $userflags = 'USER ['
+        $userflags = '['
             ($this->isStaff($api) ? 'STAFF' : '') .
             ($this->isPartner($api) ? 'PARTNER' : '') .
             ($this->isHypesquad($api) ? 'HYPESQUAD' : '') .

@@ -9,8 +9,8 @@
     }
 
     //* Get url query for and validate
-    preg_match('/([0-9]{18})/', $_SERVER['QUERY_STRING'], $matches);
-    $id = $_SERVER['QUERY_STRING'];
+    preg_match('/([0-9]{0,18})/', $_SERVER['QUERY_STRING'], $matches);
+    $id = $matches[1];
 
     class disgd extends secrets {
         //* Make an API call to Discord API
@@ -43,8 +43,6 @@
 
     //* Get the data
     $disgd_user = $disgd->get_users($id);
-    echo json_encode($disgd_user);
-    echo $_SERVER['QUERY_STRING'];
 ?>
 <!doctype html>
 <html lang="en">

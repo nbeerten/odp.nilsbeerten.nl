@@ -1,4 +1,7 @@
 <?php
+// Import Classes
+require_once 'BitwiseHandler.php'; // For "decoding" the user flags
+
     class secrets {
         //* Get bot_token from secret.json (Secrets file)
         protected function bot_token(){
@@ -38,11 +41,15 @@
         }
     }
 
-    //* Create disgd instance
-    $disgd = new disgd;
+    //* Create instances
+    $disgd = new disgd; //* Discord API connection
+    $bitwisehandler = new BitwiseHandler; //* "Decoding" user flags
 
     //* Get the data
     $disgd_user = $disgd->get_users($id);
+
+    //* "Decoding" user flags
+    $userflags = $bitwisehandler->get($disgd_user['public_flags'])
 ?>
 <!doctype html>
 <html lang="en">

@@ -1,3 +1,7 @@
+<IfModule mod_headers.c>
+    Header add Cache-Control "no-store"
+</IfModule> 
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteRule ^(\d{18})/?$ /?$1 [L,QSA]

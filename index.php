@@ -9,7 +9,7 @@
     }
 
     //* Get url query for and validate
-    preg_match('/([0-9]{0,18})/', $_SERVER['QUERY_STRING'], $matches);
+    preg_match('/([0-9]{18})/', $_SERVER['QUERY_STRING'], $matches);
     $id = $matches[0];
 
     class disgd extends secrets {

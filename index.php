@@ -8,8 +8,9 @@
         }
     }
 
-    //* Get url query: example.com?[$id]
-    $id = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+    //* Get url query for and validate
+    preg_match('/([0-9]{18})/', $_SERVER['QUERY_STRING'], $matches);
+    $id = $matches[1];
 
     class disgd extends secrets {
         //* Make an API call to Discord API

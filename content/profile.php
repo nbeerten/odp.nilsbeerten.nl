@@ -8,8 +8,8 @@
         <title><? echo $disgd_user['username']; ?> - ODP</title> 
 
 		<!-- Custom CSS-->
-		<link rel="stylesheet" href="/css/custom.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap-reboot.min.css">
+		<link rel="stylesheet" href="/css/profile.css">
+        <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
     </head>
     <body>
         <main>

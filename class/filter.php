@@ -6,7 +6,7 @@ class filter {
             $id = $matches[1];
             return $id;
         } else {
-            throw new Error('Invalid ID');
+            throw new Error('ERR:INVALID_ID');
         }
     }
 };

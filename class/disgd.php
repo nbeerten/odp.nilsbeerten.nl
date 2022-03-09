@@ -24,7 +24,7 @@
             $resp = curl_exec($curl);
             
             if(curl_errno($curl) !== 0) {
-                throw new Throwable('ERR:CURL'.curl_error($curl));
+                throw new Error('ERR:CURL'.curl_error($curl));
             }
 
             curl_close($curl);
@@ -37,8 +37,8 @@
                 $resp = $this->call_API("/users/", $id);
                 $data = json_decode($resp, true);
                 return (array)$data;
-            } catch (Throwable $e) {
-                throw new Throwable($e);
+            } catch (Error $e) {
+                throw new Error($e);
             };
         }
     }

@@ -45,9 +45,11 @@
     if(preg_match('/([0-9]{17,18})/', $_SERVER['QUERY_STRING'])) {
         preg_match('/([0-9]{17,18})/', $_SERVER['QUERY_STRING'], $matches);
         $id = $matches[1];
-    } elseif($_GET['err'] === 'invalid_id') {
-        echo 'invalid id';
-        exit();
+    } elseif(isset($_GET['err'])) {
+        if($_GET['err'] === 'invalid_id') {
+            echo 'invalid id';
+            exit();
+        }
     }
     
     //* Create instances

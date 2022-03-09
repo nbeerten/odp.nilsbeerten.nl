@@ -25,6 +25,8 @@
         echo $catched_error;
     }
 
+
+
 ?>
 <!doctype html>
 <html lang="en">

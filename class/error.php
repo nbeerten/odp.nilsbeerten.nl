@@ -5,6 +5,10 @@ class errorhandler {
             return 'Invalid ID';
         }
 
+        if(str_contains($exception, 'ERR:UNKNOWN_ID')) {
+            return 'Unknown ID';
+        }
+
         else {
             return 'Unknown error occured';
         }

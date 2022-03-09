@@ -1,6 +1,7 @@
 <?php
-// Import Classes
-require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "decoding" the user flags
+    // Import Classes
+    require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "decoding" the user flags
+    require_once $_SERVER['DOCUMENT_ROOT'].'/class/error.php'; // For general error handling
 
     class secrets {
         //* Get bot_token from secret.json (Secrets file)
@@ -10,10 +11,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "deco
             return $secret["bot_token"];
         }
     }
-
-    //* Get url query for and validate
-    preg_match('/([0-9]{0,18})/', $_SERVER['QUERY_STRING'], $matches);
-    $id = $matches[1];
 
     class disgd extends secrets {
         //* Make an API call to Discord API
@@ -44,6 +41,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "deco
         }
     }
 
+    //* Get url query for and validate
+    if(preg_match('/([0-9]{17,18})/', $_SERVER['QUERY_STRING'])) {
+        preg_match('/([0-9]{17,18})/', $_SERVER['QUERY_STRING'], $matches);
+        $id = $matches[1];
+    } elseif($_GET['err'] === 'invalid_id') {
+        echo 'invalid id';
+        exit();
+    }
+    
     //* Create instances
     $disgd = new disgd; //* Discord API connection
     $bitwisehandler = new BitwiseHandler; //* "Decoding" user flags

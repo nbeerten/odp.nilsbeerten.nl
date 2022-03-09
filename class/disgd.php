@@ -24,7 +24,7 @@
             $resp = curl_exec($curl);
             
             if(curl_errno($curl) !== 0) {
-                throw new Throwable(curl_error($curl));
+                throw new Throwable('ERR:CURL'.curl_error($curl));
             }
 
             curl_close($curl);

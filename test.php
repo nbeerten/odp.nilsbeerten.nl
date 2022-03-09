@@ -37,7 +37,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "deco
         public function get_users($id) {
             $resp = $this->call_API("/users/", $id);
             $data = $resp;
-            return (array)$data;
+            return $data;
         }
     }
 

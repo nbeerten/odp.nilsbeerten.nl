@@ -23,7 +23,7 @@
 
             $resp = curl_exec($curl);
             if(curl_errno($curl) !== 0) {
-                $resp = false;
+                throw new Exception('Error with CURL');
             }
             curl_close($curl);
             return $resp;

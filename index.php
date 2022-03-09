@@ -20,7 +20,7 @@
         //* "Decoding" user flags
         $userflags = $bitwisehandler->get($disgd_user['public_flags']);
     } catch (Throwable $e) {
-        echo 'Exception: '.$e;
+        echo $e;
     }
 
 ?>

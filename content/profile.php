@@ -44,7 +44,7 @@
                         <div class="nb-odp-profile-divider"></div>
                     </div>
                     <div class="nb-odp-profile-addfriend">
-                        <button>Copy Usernamade#0000</button>
+                        <button>Copy Username#0000</button>
                     </div>
                 </div>
             </div>

@@ -52,7 +52,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "deco
     $disgd_user = $disgd->get_users($id);
 
     if($disgd_user['code'] !== null) {
-        die('404');
+        echo "404";
+        die;
     }
 
     //* "Decoding" user flags

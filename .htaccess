@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteRule ^(\d{17,18})/?$ /?$1 [L,QSA]
+    RewriteRule ^(\d{17,18})/?$ /?id=$1 [L,QSA]
 </IfModule>
 
 ErrorDocument 403 https://nilsbeerten.nl/403.html

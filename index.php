@@ -10,7 +10,7 @@
     $bitwisehandler = new BitwiseHandler; //* "Decoding" user flags
     
     //* Get url query for and validate
-    $id = $handler->obj_userid($_SERVER['QUERY_STRING']);
+    $id = $handler->obj_userid($_GET['id']);
 
     //* Get the data
     $disgd_user = $disgd->get_users($id);

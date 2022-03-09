@@ -20,13 +20,20 @@
 
         //* "Decoding" user flags
         $userflags = $bitwisehandler->get($disgd_user['public_flags']);
+
+        //* Ready to output
+        $status = 1;
     } catch (Error $e) {
         $catched_error = $error->exception($e);
         echo $catched_error;
+
+        //* Not ready to output
+        $status = 0;
     }
 
-
-
+    //* Check if ready to output the HTML below;
+    if($status === 1) 
+    { //* Close bracket is located at end of HTML
 ?>
 <!doctype html>
 <html lang="en">
@@ -81,3 +88,5 @@
         </main>
     </body>
 </html>
+<? }; //* Closing the bracket, normal HTML output will only happen upon a valid status
+?>

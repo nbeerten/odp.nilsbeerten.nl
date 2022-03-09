@@ -1,27 +1,28 @@
 <?php
     // Import Classes
     require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "decoding" the user flags
-    require_once $_SERVER['DOCUMENT_ROOT'].'/class/handler.php'; // For general error handling
+    require_once $_SERVER['DOCUMENT_ROOT'].'/class/filter.php'; // For general filtering
     require_once $_SERVER['DOCUMENT_ROOT'].'/class/disgd.php'; // Discord API communication
 
     //* Create instances
     $disgd = new disgd; //* Discord API connection
-    $handler = new handler; //* Error handling and key validation
+    $filter = new filter; //* Error handling and key validation
     $bitwisehandler = new BitwiseHandler; //* "Decoding" user flags
     
-    //* Get url query for and validate
-    $id = $handler->obj_userid($_GET['id']);
+    
+    try {
+        //* Get url query for and validate
+        $id = $filter->userid($_GET['id']);
 
-    //* Get the data
-    $disgd_user = $disgd->get_users($id);
+        //* Get the data
+        $disgd_user = $disgd->get_users($id);
 
-    if(isset($disgd_user['code'])) {
-        echo "404";
-        exit;
+        //* "Decoding" user flags
+        $userflags = $bitwisehandler->get($disgd_user['public_flags']);
+    } catch (Exception $e) {
+        echo 'Exception: '.$e;
     }
 
-    //* "Decoding" user flags
-    $userflags = $bitwisehandler->get($disgd_user['public_flags']);
 ?>
 <!doctype html>
 <html lang="en">

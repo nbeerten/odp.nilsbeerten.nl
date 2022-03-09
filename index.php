@@ -41,6 +41,11 @@
         }
     }
 
+    //* Create instances
+    $disgd = new disgd; //* Discord API connection
+    $bitwisehandler = new BitwiseHandler; //* "Decoding" user flags
+    $errorhandler = new errorhandler;
+
     //* Get url query for and validate
     if(preg_match('/([0-9]{17,18})/', $_SERVER['QUERY_STRING'])) {
         preg_match('/([0-9]{17,18})/', $_SERVER['QUERY_STRING'], $matches);
@@ -50,12 +55,10 @@
             echo 'invalid id';
             exit();
         }
+    } else {
+        $errorhandler->invalid_ID();
+        exit();
     }
-    
-    //* Create instances
-    $disgd = new disgd; //* Discord API connection
-    $bitwisehandler = new BitwiseHandler; //* "Decoding" user flags
-    $errorhandler = new errorhandler;
 
     //* Get the data
     $disgd_user = $disgd->get_users($id);

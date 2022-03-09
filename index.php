@@ -21,14 +21,16 @@
         //* "Decoding" user flags
         $userflags = $bitwisehandler->get($disgd_user['public_flags']);
 
-        //* Ready to output
+        //* Ready to output (deprecated)
         $status = 1;
-        require $_SERVER['DOCUMENT_ROOT'].'/content/profile.php'; //* Output the profile page
+
+        // Output the profile page
+        require $_SERVER['DOCUMENT_ROOT'].'/content/profile.php'; 
     } catch (Error $e) {
         $catched_error = $error->exception($e);
         echo $catched_error;
 
-        //* Not ready to output
+        //* Not ready to output (deprecated)
         $status = 0;
     }
 ?>

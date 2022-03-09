@@ -29,6 +29,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "deco
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
             $resp = curl_exec($curl);
+            if(curl_errno($curl) !== 0) {
+                $resp = false;
+            }
             curl_close($curl);
             return $resp;
         }

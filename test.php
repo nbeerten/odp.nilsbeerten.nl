@@ -18,7 +18,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "deco
     class disgd extends secrets {
         //* Make an API call to Discord API
         protected function call_API($type, $id) {
-            $url = "https://discord.com/api/v9";
+            $url = "https://discord.alsjkdasldj/api/v9";
             $curl = curl_init($url);
 
             curl_setopt($curl, CURLOPT_URL, $url.$type.$id);

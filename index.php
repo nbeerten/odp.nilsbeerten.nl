@@ -53,6 +53,7 @@
     //* Create instances
     $disgd = new disgd; //* Discord API connection
     $bitwisehandler = new BitwiseHandler; //* "Decoding" user flags
+    $errorhandler = new errorhandler;
 
     //* Get the data
     $disgd_user = $disgd->get_users($id);

@@ -22,18 +22,24 @@
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
             $resp = curl_exec($curl);
+            
             if(curl_errno($curl) !== 0) {
-                throw new Exception('Error with CURL');
+                throw new Exception('Error with CURL: '.curl_error($curl));
             }
+
             curl_close($curl);
             return $resp;
         }
 
         //* Get the user object using the `/users/{user.id}` type
         public function get_users($id) {
-            $resp = $this->call_API("/users/", $id);
-            $data = json_decode($resp, true);
-            return (array)$data;
+            try {
+                $resp = $this->call_API("/users/", $id);
+                $data = json_decode($resp, true);
+                return (array)$data;
+            } catch (Exception $e) {
+                throw new Exception('Exception: '.$e);
+            };
         }
     }
 ?>

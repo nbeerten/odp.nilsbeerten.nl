@@ -24,7 +24,7 @@
             $resp = curl_exec($curl);
             
             if(curl_errno($curl) !== 0) {
-                throw new Exception('Error with CURL: '.curl_error($curl));
+                throw new Exception(curl_error($curl));
             }
 
             curl_close($curl);
@@ -38,7 +38,7 @@
                 $data = json_decode($resp, true);
                 return (array)$data;
             } catch (Exception $e) {
-                throw new Exception('Exception: '.$e);
+                throw new Exception($e);
             };
         }
     }

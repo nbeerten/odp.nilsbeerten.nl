@@ -29,6 +29,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "deco
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
             $resp = curl_exec($curl);
+            if(curl_errno($curl) !== 0) {
+                $resp = false;
+            }
             curl_close($curl);
             return $resp;
         }
@@ -48,9 +51,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/class/BitwiseHandler.php'; // For "deco
     //* Get the data
     $disgd_user = $disgd->get_users($id);
 
+    if($disgd_user)
+
     //* "Decoding" user flags
     $userflags = $bitwisehandler->get($disgd_user['public_flags']);
-    // echo json_encode($userflags);
 ?>
 <!doctype html>
 <html lang="en">

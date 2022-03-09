@@ -36,6 +36,11 @@
             try {
                 $resp = $this->call_API("/users/", $id);
                 $data = json_decode($resp, true);
+
+                if(isset($data['code'])) {
+                    throw new Error('ERR:UNKNOWN_ID '.$data['message']);
+                }
+                
                 return (array)$data;
             } catch (Error $e) {
                 throw new Error($e);

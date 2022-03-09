@@ -58,7 +58,7 @@
     //* Get the data
     $disgd_user = $disgd->get_users($id);
 
-    if($disgd_user['code'] !== null) {
+    if(isset($disgd_user['code'])) {
         echo "404";
         exit;
     }

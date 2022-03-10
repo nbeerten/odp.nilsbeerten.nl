@@ -31,8 +31,8 @@
                                     <img src="<? echo "https://cdn.discordapp.com/avatars/".$disgd_user['id']."/".$disgd_user['avatar']; ?>">
                                 <? }; ?>
                             </div>
-                            <div class="nb-odp-profile-picture-status">
-                            </div>
+                            <!-- <div class="nb-odp-profile-picture-status">
+                            </div> -->
                         </div>
                         <div class="nb-odp-profile-badges">
                             <!-- <div><img src="/assets/balancebadge.svg"></div>

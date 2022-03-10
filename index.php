@@ -29,6 +29,7 @@
     } catch (Error $e) {
         $catched_error = $error->exception($e);
         echo $catched_error;
+        echo $e;
 
         //* Not ready to output (deprecated)
         $status = 0;

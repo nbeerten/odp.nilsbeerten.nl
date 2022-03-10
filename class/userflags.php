@@ -7,7 +7,7 @@ class BitwiseHandler {
     const FLAG_PARTNER = 2;
     const FLAG_HYPESQUAD = 4;
     const FLAG_BUG_HUNTER_LEVEL_1 = 8;
-    const FLAG_HYPESQUAD_BRAVERY = 6;
+    const FLAG_HYPESQUAD_BRAVERY = 64;
     const FLAG_HYPESQUAD_BRILLIANCE = 128;
     const FLAG_HYPESQUAD_BALANCE = 256;
     const FLAG_PREMIUM_EARLY_SUPPORTER = 512;

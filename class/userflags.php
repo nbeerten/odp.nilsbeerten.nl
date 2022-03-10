@@ -90,7 +90,7 @@ class BitwiseHandler {
                 "HYPESQUAD_BALANCE" => ($this->isHypesquad_Balance($string) ? true : false) ,
                 "PREMIUM_EARLY_SUPPORTER" => ($this->isPremium_Early_Supporter($string) ? true : false) ,
                 "TEAM_PSEUDO_USER" => ($this->isTeam_Pseudo_User($string) ? true : false) ,
-                "FLAG_BUG_HUNTER_LEVEL_2" => ($this->isBug_Hunter_Level_2($string) ? true : false) ,
+                "BUG_HUNTER_LEVEL_2" => ($this->isBug_Hunter_Level_2($string) ? true : false) ,
                 "VERIFIED_DEVELOPER" => ($this->isVerified_Developer($string) ? true : false) ,
                 "CERTIFIED_MODERATOR" => ($this->isCertified_Moderator($string) ? true : false) ,
                 "BOT_HTTP_INTERACTIONS" => ($this->isBOT_HTTP_INTERACTIONS($string) ? true : false) ,
@@ -107,25 +107,19 @@ class userflags extends BitwiseHandler {
         try {
         $userflags = $this->get_flag_array($string);
         $output = (string)"";
+        $output.= $userflags["STAFF"] ? '<div><img src="https://discord.com/assets/48d5bdcffe9e7848067c2e187f1ef951.svg"></div>' : '';
+        $output.= $userflags["PARTNER"] ? '<div><img src="https://discord.com/assets/34306011e46e87f8ef25f3415d3b99ca.svg"></div>' : '';
+        $output.= $userflags["CERTIFIED_MODERATOR"] ? '<div><img src="https://discord.com/assets/c981e58b5ea4b7fedd3a643cf0c60564.svg"></div>' : '';
+        $output.= $userflags["HYPESQUAD"] ? '<div><img src="https://discord.com/assets/e666a84a7a5ea2abbbfa73adf22e627b.svg"></div>' : '';
         $output.= $userflags["HYPESQUAD_BRAVERY"] ? '<div><img src="/assets/braverybadge.svg"></div>' : '';
         $output.= $userflags["HYPESQUAD_BRILLIANCE"] ? '<div><img src="/assets/brilliancebadge.svg"></div>' : '';
         $output.= $userflags["HYPESQUAD_BALANCE"] ? '<div><img src="/assets/balancebadge.svg"></div>' : '';
+        $output.= $userflags["BUG_HUNTER_LEVEL_2"] ? '<div><img src="https://discord.com/assets/f599063762165e0d23e8b11b684765a8.svg"></div>' : '';
+        $output.= $userflags["BUG_HUNTER_LEVEL_1"] ? '<div><img src="https://discord.com/assets/8353d89b529e13365c415aef08d1d1f4.svg"></div>' : '';
+        $output.= $userflags["VERIFIED_DEVELOPER"] ? '<div><img src="https://discord.com/assets/4441e07fe0f46b3cb41b79366236fca6.svg"></div>' : '';
+        $output.= $userflags["PREMIUM_EARLY_SUPPORTER"] ? '<div><img src="https://discord.com/assets/b802e9af134ff492276d94220e36ec5c.svg"></div>' : '';
 
         return $output;
-        
-        // if($userflags["STAFF"]) {};
-        // if($userflags["PARTNER"]) {};
-        // if($userflags["HYPESQUAD"]) {};
-        // if($userflags["BUG_HUNTER_LEVEL_1"]) {};
-        // if($userflags["HYPESQUAD_BRAVERY"]) {};
-        // if($userflags["HYPESQUAD_BRILLIANCE"]) {};
-        // if($userflags["HYPESQUAD_BALANCE"]) {};
-        // if($userflags["PREMIUM_EARLY_SUPPORTER"]) {};
-        // if($userflags["TEAM_PSEUDO_USER"]) {};
-        // if($userflags["FLAG_BUG_HUNTER_LEVEL_2"]) {};
-        // if($userflags["VERIFIED_DEVELOPER"]) {};
-        // if($userflags["CERTIFIED_MODERATOR"]) {};
-        // if($userflags["BOT_HTTP_INTERACTIONS"]) {};
         } catch (Error $e) {
             throw new Error($e);
         }

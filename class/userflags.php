@@ -107,17 +107,17 @@ class userflags extends BitwiseHandler {
         try {
         $userflags = $this->get_flag_array($string);
         $output = (string)"";
-        $output.= $userflags["STAFF"] ? '<div><img src="https://discord.com/assets/48d5bdcffe9e7848067c2e187f1ef951.svg"></div>' : '';
-        $output.= $userflags["PARTNER"] ? '<div><img src="https://discord.com/assets/34306011e46e87f8ef25f3415d3b99ca.svg"></div>' : '';
-        $output.= $userflags["CERTIFIED_MODERATOR"] ? '<div><img src="https://discord.com/assets/c981e58b5ea4b7fedd3a643cf0c60564.svg"></div>' : '';
-        $output.= $userflags["HYPESQUAD"] ? '<div><img src="https://discord.com/assets/e666a84a7a5ea2abbbfa73adf22e627b.svg"></div>' : '';
-        $output.= $userflags["HYPESQUAD_BRAVERY"] ? '<div><img src="/assets/braverybadge.svg"></div>' : '';
-        $output.= $userflags["HYPESQUAD_BRILLIANCE"] ? '<div><img src="/assets/brilliancebadge.svg"></div>' : '';
-        $output.= $userflags["HYPESQUAD_BALANCE"] ? '<div><img src="/assets/balancebadge.svg"></div>' : '';
-        $output.= $userflags["BUG_HUNTER_LEVEL_2"] ? '<div><img src="https://discord.com/assets/f599063762165e0d23e8b11b684765a8.svg"></div>' : '';
-        $output.= $userflags["BUG_HUNTER_LEVEL_1"] ? '<div><img src="https://discord.com/assets/8353d89b529e13365c415aef08d1d1f4.svg"></div>' : '';
-        $output.= $userflags["VERIFIED_DEVELOPER"] ? '<div><img src="https://discord.com/assets/4441e07fe0f46b3cb41b79366236fca6.svg"></div>' : '';
-        $output.= $userflags["PREMIUM_EARLY_SUPPORTER"] ? '<div><img src="https://discord.com/assets/b802e9af134ff492276d94220e36ec5c.svg"></div>' : '';
+        $output.= $userflags["STAFF"] ? '<div><img src="/assets/badge/STAFF.svg"></div>' : '';
+        $output.= $userflags["PARTNER"] ? '<div><img src="/assets/badge/PARTNER.svg"></div>' : '';
+        $output.= $userflags["CERTIFIED_MODERATOR"] ? '<div><img src="/assets/badge/CERTIFIED_MODERATOR.svg"></div>' : '';
+        $output.= $userflags["HYPESQUAD"] ? '<div><img src="/assets/badge/HYPESQUAD.svg"></div>' : '';
+        $output.= $userflags["HYPESQUAD_BRAVERY"] ? '<div><img src="/assets/badge/HYPESQUAD_BRAVERY.svg"></div>' : '';
+        $output.= $userflags["HYPESQUAD_BRILLIANCE"] ? '<div><img src="/assets/badge/HYPESQUAD_BRILLIANCE.svg"></div>' : '';
+        $output.= $userflags["HYPESQUAD_BALANCE"] ? '<div><img src="/assets/badge/HYPESQUAD_BALANCE.svg"></div>' : '';
+        $output.= $userflags["BUG_HUNTER_LEVEL_2"] ? '<div><img src="/assets/badge/BUG_HUNTER_LEVEL_2.svg"></div>' : '';
+        $output.= $userflags["BUG_HUNTER_LEVEL_1"] ? '<div><img src="/assets/badge/BUG_HUNTER_LEVEL_1.svg"></div>' : '';
+        $output.= $userflags["VERIFIED_DEVELOPER"] ? '<div><img src="/assets/badge/VERIFIED_DEVELOPER.svg"></div>' : '';
+        $output.= $userflags["PREMIUM_EARLY_SUPPORTER"] ? '<div><img src="/assets/badge/PREMIUM_EARLY_SUPPORTER.svg"></div>' : '';
 
         return $output;
         } catch (Error $e) {

@@ -28,8 +28,7 @@
                         </div>
                         <div class="nb-odp-profile-badges">
                         </div>
-                        <h1>Enter a Discord-ID below</h1>
-                        <h2>Enter a valid Discord user ID below and submit to see the users profile.</h2>
+                        <h1>Enter a valid Discord user ID below and submit to see the users profile.</h1>
                     </div>
                     <div class="nb-odp-profile-usercontent">    
                         <div class="nb-odp-profile-status">

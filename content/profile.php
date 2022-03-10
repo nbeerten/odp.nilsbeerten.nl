@@ -35,8 +35,9 @@
                             </div>
                         </div>
                         <div class="nb-odp-profile-badges">
-                            <div><img src="/assets/balancebadge.svg"></div>
-                            <div><img src="/assets/nitrobadge.svg"></div>
+                            <!-- <div><img src="/assets/balancebadge.svg"></div>
+                            <div><img src="/assets/nitrobadge.svg"></div> -->
+                            <? echo $output_userflags; ?>
                         </div>
                         <h1><? echo $disgd_user['username']."#".$disgd_user['discriminator']; ?></h1>
                     </div>

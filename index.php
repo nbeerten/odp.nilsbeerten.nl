@@ -22,9 +22,12 @@
         $output_userflags = $userflags->get_html($disgd_user['public_flags']);
 
         // Output the profile page
-        require $_SERVER['DOCUMENT_ROOT'].'/content/profile.php'; 
+        require $_SERVER['DOCUMENT_ROOT'].'/content/profile.php';
     } catch (Error $e) {
         $catched_error = $error->exception($e);
         echo $catched_error;
+
+        // Output the profile page
+        require $_SERVER['DOCUMENT_ROOT'].'/content/input.php';
     }
 ?>

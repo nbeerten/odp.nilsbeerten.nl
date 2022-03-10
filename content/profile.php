@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title><? echo $disgd_user['username']; ?> - ODP</title>
-        <link rel="icon" href="<? echo "https://cdn.discordapp.com/avatars/".$disgd_user['id']."/".$disgd_user['avatar']; ?>" type="image/x-icon" />
+        <link rel="icon" href="/assets/favicon.png" type="image/x-icon"/>
 
 		<!-- Custom CSS-->
 		<link rel="stylesheet" href="/css/profile.css">

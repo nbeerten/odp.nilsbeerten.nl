@@ -1,4 +1,5 @@
 # ODP (OpenDiscordProfile)
+![Logo of this repository](https://github.com/nbeerten/odp.nilsbeerten.nl/blob/main/assets/favicon.png?raw=true)
 ## Still in development!
 Repository of the ODP project. 
 

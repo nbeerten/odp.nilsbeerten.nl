@@ -9,42 +9,44 @@
         <link rel="icon" href="/assets/favicon.png" type="image/x-icon"/>
 
 		<!-- Custom CSS-->
-		<link rel="stylesheet" href="/css/profile.css">
+		<link rel="stylesheet" href="/css/input.css">
         <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
     </head>
     <body>
         <main>
             <div class="nb-odp-main">
-                <div class="nb-odp-profile">
-                    <div class="nb-odp-profile-banner" style="background-color: #5865f2;">
-                        <div>
+                <div class="nb-odp-box">
+                    <div class="nb-odp-banner"></div>
+                    <div class="nb-odp-contents">
+                        <div class="nb-odp-header">
+                            <h1>ODP</h1>
+                            <h2>OpenDiscordProfile</h2>
                         </div>
-                    </div>
-                    <div class="nb-odp-profile-name">
-                        <div class="nb-odp-profile-picture">
-                            <div class="nb-odp-profile-picture-pic">
-                                <img src="/assets/favicon.png">
+                        <hr>
+                        <div class="nb-odp-lookupsection">
+                            <h3>Find a profile using a Discord user ID</h3>
+                            <div class="nb-odp-input">
+                                <input id="odpinput" placeholder="User ID">
+                                <button id="odpsubmit">Submit</button>
                             </div>
+                            <span id="odperror"></span>
                         </div>
-                        <div class="nb-odp-profile-badges">
+                        <hr>
+                        <div class="nb-odp-info">
+                            <h3>Help</h3>
+                            <ul>
+                                <li><a href="https://support.discord.com/hc/en-us/articles/206346498" target="_blank" rel="noopener">Get user ID</a></li>
+                            </ul>
                         </div>
-                        <h1>Enter a valid Discord user ID below and submit to see the users profile.</h1>
-                    </div>
-                    <div class="nb-odp-profile-usercontent">    
-                        <div class="nb-odp-profile-status">
-                            <span>Still in development! Check back later for improved functionality. At this moment most features will or might not work.</span>
+                        <div class="nb-odp-projectinfo">
+                            <a href="https://nilsbeerten.nl" target="_blank"><i class="bi bi-house-fill"></i></a>
+                            <a href="https://github.com/nbeerten/odp.nilsbeerten.nl" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+                            <a href="https://odp.nilsbeerten.nl/543059753669230623/" target="_blank"><i class="bi bi-discord"></i></a>
                         </div>
-                        <div class="nb-odp-profile-divider"></div>
-                        <div class="nb-odp-profile-aboutme">
-                            <h3>About ODP</h3>
-                            <p>Allows you to fetch information from Discords API and display it in a profile. You can share the URL for people to view your profile.</p>
-                        </div>
-                    </div>
-                    <div class="nb-odp-profile-addfriend">
-                        <button>This button doesnt work lol</button>
                     </div>
                 </div>
             </div>
         </main>
+        <script src="/js/input.js" type="application/javascript"></script>
     </body>
 </html>

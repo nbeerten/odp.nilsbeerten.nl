@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600&family=Work+Sans:wght@600;800&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+:root {
+    --odp-main: #36393f;
+    --odp-profile: #18191c;
+    --odp-brand-blue: #5865F2;
+    --odp-profilepx-borderrad: 8px;
+    
+    --odp-font-thick: 'Work Sans', sans-serif;
+    --odp-font-normal: 'Catamaran', sans-serif;
+    
+    --text-header-color: #ffffff;
+    --text-header-color-secondary: #b9bbbe;
+    --text-color: #dcddde;
+}
+
+* {
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-color: var(--odp-main);
+}
+
+.nb-odp-main {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    max-height: 100%;
+    background: var(--odp-main);
+    display: grid;
+    place-content: center;
+}
+
+.nb-odp-box {
+    min-width: 30rem;
+    width: auto;
+    max-width: 100vw;
+    height: auto;
+    background-color: var(--odp-profile);
+    border-width: 0px;
+    border-style: solid;
+    border-radius: var(--odp-profilepx-borderrad);
+    overflow: hidden;
+}
+
+.nb-odp-contents {
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.nb-odp-contents hr {
+    color: #888888;
+}
+
+.nb-odp-banner {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--odp-brand-blue);
+}
+
+.nb-odp-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.nb-odp-header h1 {
+    font-size: 2rem;
+    color: var(--text-header-color);
+    margin: 0;
+    font-family: var(--odp-font-thick);
+}
+
+.nb-odp-header h2 {
+    font-size: 2rem;
+    color: var(--text-header-color-secondary);
+    margin: 0;
+    font-family: var(--odp-font-thick);
+}
+
+.nb-odp-lookupsection h3 {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-family: var(--odp-font-thick);
+}
+
+.nb-odp-lookupsection .nb-odp-input {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    gap: 0.5rem
+}
+
+.nb-odp-lookupsection .nb-odp-input input {
+    color: var(--text-color);
+    font-family: monospace;
+    font-size: 1.1em;
+
+    background-color: #303339;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 0.2em;
+    padding: 0.3em 0.8em;
+
+    width: 100%;
+
+    transition: border 0.1s ease-in-out;
+}
+
+.nb-odp-lookupsection .nb-odp-input input:hover {
+    border-color: var(--odp-brand-blue);
+}
+
+.nb-odp-lookupsection .nb-odp-input input:focus {
+    outline: none;
+    border-color: var(--odp-brand-blue);
+}
+
+.nb-odp-lookupsection .nb-odp-input button {
+    color: var(--text-color);
+    font-family: var(--odp-font-normal);
+
+    background-color: var(--odp-brand-blue);
+    border-style: none;
+    border-radius: 0.2em;
+    padding: 0.3em 0.8em;
+
+    width: 100%;
+
+    transition: border 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.nb-odp-lookupsection .nb-odp-input button:hover {
+    background-color: #3543df;
+}
+
+.nb-odp-lookupsection .nb-odp-input button:focus {
+    outline: white solid 2px;
+    background-color: #3543df;
+}
+
+.nb-odp-lookupsection #odperror {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.nb-odp-info h3 {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-family: var(--odp-font-thick);
+}
+
+.nb-odp-info a {
+    font-size: 1.1em;
+}
+
+.nb-odp-info ul {
+    color: var(--text-color);
+}
+
+.nb-odp-projectinfo {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: end;
+
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.nb-odp-projectinfo a {
+    color: white;
+}
+
+.nb-odp-projectinfo a:hover {
+    color: white;
+}

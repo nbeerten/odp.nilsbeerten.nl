@@ -1,6 +1,10 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteRule ^(\d{17,18})/?$ /?id=$1 [L,QSA]
+
+    RewriteBase /
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 </IfModule>
 
 ErrorDocument 403 https://nilsbeerten.nl/403.html

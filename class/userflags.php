@@ -91,6 +91,7 @@ class BitwiseHandler {
                 "PREMIUM_EARLY_SUPPORTER" => ($this->isPremium_Early_Supporter($string) ? true : false) ,
                 "TEAM_PSEUDO_USER" => ($this->isTeam_Pseudo_User($string) ? true : false) ,
                 "BUG_HUNTER_LEVEL_2" => ($this->isBug_Hunter_Level_2($string) ? true : false) ,
+                "VERIFIED_BOT" => ($this->isVerified_Bot($string) ? true : false) ,
                 "VERIFIED_DEVELOPER" => ($this->isVerified_Developer($string) ? true : false) ,
                 "CERTIFIED_MODERATOR" => ($this->isCertified_Moderator($string) ? true : false) ,
                 "BOT_HTTP_INTERACTIONS" => ($this->isBOT_HTTP_INTERACTIONS($string) ? true : false) ,
@@ -118,6 +119,7 @@ class userflags extends BitwiseHandler {
         $output.= $userflags["BUG_HUNTER_LEVEL_1"] ? '<div><img src="/assets/badge/BUG_HUNTER_LEVEL_1.svg"></div>' : '';
         $output.= $userflags["VERIFIED_DEVELOPER"] ? '<div><img src="/assets/badge/VERIFIED_DEVELOPER.svg"></div>' : '';
         $output.= $userflags["PREMIUM_EARLY_SUPPORTER"] ? '<div><img src="/assets/badge/PREMIUM_EARLY_SUPPORTER.svg"></div>' : '';
+        $output.= $userflags["VERIFIED_BOT"] ? '<div><img src="/assets/badge/VERIFIED_BOT.PNG"></div>' : '';
 
         return $output;
         } catch (Error $e) {

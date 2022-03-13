@@ -119,7 +119,7 @@ class userflags extends BitwiseHandler {
         $output.= $userflags["BUG_HUNTER_LEVEL_1"] ? '<div><img src="/assets/badge/BUG_HUNTER_LEVEL_1.svg"></div>' : '';
         $output.= $userflags["VERIFIED_DEVELOPER"] ? '<div><img src="/assets/badge/VERIFIED_DEVELOPER.svg"></div>' : '';
         $output.= $userflags["PREMIUM_EARLY_SUPPORTER"] ? '<div><img src="/assets/badge/PREMIUM_EARLY_SUPPORTER.svg"></div>' : '';
-        $output.= $userflags["VERIFIED_BOT"] ? '<div><img src="/assets/badge/VERIFIED_BOT.PNG"></div>' : '';
+        $output.= $userflags["VERIFIED_BOT"] ? '<div><img src="/assets/badge/VERIFIED_BOT.png"></div>' : '';
 
         return $output;
         } catch (Error $e) {

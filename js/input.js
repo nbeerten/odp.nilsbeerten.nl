@@ -9,3 +9,9 @@ document.getElementById("odpsubmit").onclick = function ()
             odperror.textContent = 'Invalid ID';
         }
     };
+
+document.getElementById("odpinput").addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {  
+        document.getElementById("odpsubmit").click();
+    }
+});

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600&family=Work+Sans:wght@600;800&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 :root {
     --odp-main: #36393f;
@@ -17,6 +16,7 @@
 
 * {
     text-rendering: optimizeLegibility;
+    box-sizing: border-box;
 }
 
 body {
@@ -34,7 +34,6 @@ body {
 }
 
 .nb-odp-box {
-    min-width: 30rem;
     width: auto;
     max-width: 100vw;
     height: auto;
@@ -43,44 +42,79 @@ body {
     border-style: solid;
     border-radius: var(--odp-profilepx-borderrad);
     overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px auto auto auto;
+}
+
+@media (min-width: 768px) {
+    .nb-odp-box {
+        min-width: 30rem;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 80px auto auto;
+    }
+}
+
+.nb-odp-banner {
+    width: 100%;
+    height: 100%;
+    background: rgb(191,76,191);
+    background: linear-gradient(153deg, rgba(191,76,191,1) 0%, var(--odp-brand-blue) 17%, var(--odp-brand-blue) 34%, rgba(191,76,191,1) 65%);
+
+    grid-column: span 1;
+    grid-row: span 1;
+
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .nb-odp-banner {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .nb-odp-banner .nb-odp-logo {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        width: 5rem;
+        height: 5rem;
+        background-image: url(/assets/odplogo.webp);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.nb-odp-banner h1 {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    height: 5rem;
+
+    margin: 0;
+    display: flex;
+    align-items: center;
+    
+    font-family: var(--odp-font-thick);
+    color: var(--text-header-color);
+    font-weight: 800;
 }
 
 .nb-odp-contents {
     padding: 1rem 2rem;
     position: relative;
+
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
 .nb-odp-contents hr {
     color: #888888;
 }
 
-.nb-odp-banner {
-    width: 100%;
-    height: 3rem;
-    background-color: var(--odp-brand-blue);
-}
-
-.nb-odp-header {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-.nb-odp-header h1 {
-    font-size: 2rem;
-    color: var(--text-header-color);
-    margin: 0;
-    font-family: var(--odp-font-thick);
-}
-
-.nb-odp-header h2 {
-    font-size: 2rem;
-    color: var(--text-header-color-secondary);
-    margin: 0;
-    font-family: var(--odp-font-thick);
-}
-
-.nb-odp-lookupsection h3 {
+.nb-odp-lookupsection h2 {
     color: var(--text-color);
     font-size: 1.3rem;
     font-family: var(--odp-font-thick);
@@ -90,7 +124,22 @@ body {
     display: grid;
     grid-template-columns: 1fr auto;
     width: 100%;
-    gap: 0.5rem
+
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: black;
+    border-radius: 0.2em;
+    overflow: hidden;
+
+    transition: border 0.1s ease-in-out;
+}
+
+.nb-odp-lookupsection .nb-odp-input:hover {
+    border-color: var(--odp-brand-blue);
+}
+
+.nb-odp-lookupsection .nb-odp-input:focus-within {
+    border-color: var(--odp-brand-blue);
 }
 
 .nb-odp-lookupsection .nb-odp-input input {
@@ -99,38 +148,28 @@ body {
     font-size: 1.1em;
 
     background-color: #303339;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    border-radius: 0.2em;
+    border-style: none;
     padding: 0.3em 0.8em;
 
-    width: 100%;
-
-    transition: border 0.1s ease-in-out;
-}
-
-.nb-odp-lookupsection .nb-odp-input input:hover {
-    border-color: var(--odp-brand-blue);
+    width: 100%;    
 }
 
 .nb-odp-lookupsection .nb-odp-input input:focus {
     outline: none;
-    border-color: var(--odp-brand-blue);
 }
 
 .nb-odp-lookupsection .nb-odp-input button {
     color: var(--text-color);
     font-family: var(--odp-font-normal);
+    margin: 0;
 
     background-color: var(--odp-brand-blue);
     border-style: none;
-    border-radius: 0.2em;
+    border-width: 0;
     padding: 0.3em 0.8em;
-
     width: 100%;
 
-    transition: border 0.1s ease-in-out, background-color 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
 }
 
 .nb-odp-lookupsection .nb-odp-input button:hover {
@@ -138,13 +177,31 @@ body {
 }
 
 .nb-odp-lookupsection .nb-odp-input button:focus {
-    outline: white solid 2px;
     background-color: #3543df;
 }
 
-.nb-odp-lookupsection #odperror {
+#odperror:empty {
+    display: none;
+}
+
+#odperror {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0.8em;
+    margin: 0.2em 0;
+
+    background-color: black;
+    border-radius: 0.2em;
     color: var(--text-color);
-    font-weight: bold;
+    font-family: var(--odp-font-normal);
+    font-weight: 600;
+}
+
+#odperror:before {
+    content: "\f05a";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    padding-right: 0.3em;
 }
 
 .nb-odp-info h3 {
@@ -153,27 +210,69 @@ body {
     font-family: var(--odp-font-thick);
 }
 
-.nb-odp-info a {
-    font-size: 1.1em;
-}
-
 .nb-odp-info ul {
     color: var(--text-color);
 }
 
-.nb-odp-projectinfo {
+.nb-odp-footer {
+    grid-column: span 1;
+    grid-row: span 1;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .nb-odp-footer {
+        grid-column: span 2;
+    }
+}
+
+.nb-odp-credits {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: start;
+
+    width: 100%;
+    font-size: 1em;
+    color: var(--text-color);
+    padding: 0.5rem 2rem;
+}
+
+.nb-odp-credits * {
+    margin: 0;
+}
+
+.nb-odp-credits a {
+    color: var(--text-color);
+
+    transition: color 0.1s ease-in-out;
+}
+
+.nb-odp-credits a:hover {
+    color: var(--odp-brand-blue);
+}
+
+.nb-odp-links {
     display: flex;
     gap: 0.8rem;
     justify-content: end;
 
-    width: 100%;
+    padding: 0.5rem 2rem;
+
+    width: max-content;
     font-size: 1.3em;
 }
 
-.nb-odp-projectinfo a {
+.nb-odp-links a {
     color: white;
+
+    transition: box-shadow 0.1s ease-in-out;
 }
 
-.nb-odp-projectinfo a:hover {
+.nb-odp-links a:hover {
     color: white;
+    box-shadow: 0 0 1rem black;
 }

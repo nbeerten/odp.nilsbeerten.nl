@@ -2,7 +2,7 @@
     class secrets {
         //* Get bot_token from secret.json (Secrets file)
         protected function bot_token(){
-            $secretfile = file_get_contents("secret.json");
+            $secretfile = file_get_contents($_SERVER['DOCUMENT_ROOT']."/secret.json");
             $secret = json_decode($secretfile, true);
             return $secret["bot_token"];
         }

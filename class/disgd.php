@@ -18,6 +18,7 @@
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             $headers = array(
                         "Authorization: Bot ".$this->bot_token(),
+                        "User-Agent: DiscordBot (odp.nilsbeerten.nl, 0.1)"
                     );
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
